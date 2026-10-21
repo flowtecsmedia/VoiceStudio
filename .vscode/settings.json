@@ -1,0 +1,25 @@
+{
+  // ============================================
+  // STATUSBAR HUB
+  // Ein Button pro Projekt (vscode-task-buttons), darin ein
+  // Quick-Pick mit allen Tasks. Gleiches Muster wie Book Factory.
+  // ============================================
+  "tasks.statusbar.default.hide": true,
+  "VsCodeTaskButtons.showCounter": false,
+  "VsCodeTaskButtons.tasks": [
+    {
+      "label": "$(mic) VoiceStudio",
+      "task": null,
+      "tooltip": "VoiceStudio – Stimmen klonen, Dubbing, Diktat, Hoerbuecher",
+      "alignment": "left",
+      "tasks": [
+        { "label": "$(rocket) Desktop-App starten", "description": "Electron, Dev-Modus",   "task": "VoiceStudio · Dev: Desktop-App starten" },
+        { "label": "$(globe) Web + API starten",    "description": "Backend + Oberflaeche", "task": "VoiceStudio · Dev: Web + API starten" },
+        { "label": "$(server) Nur API starten",     "description": "Backend",               "task": "VoiceStudio · Dev: Nur API starten" },
+        { "label": "$(beaker) Frontend-Tests",      "description": "node --test",           "task": "VoiceStudio · Test: Frontend-Tests" },
+        { "label": "$(cloud-download) bun install", "description": "Pakete holen",          "task": "VoiceStudio · Setup: Pakete installieren" },
+        { "label": "$(tools) Bun installieren",     "description": "einmalig, fehlt sonst", "task": "VoiceStudio · Setup: Bun installieren" }
+      ]
+    }
+  ]
+}
