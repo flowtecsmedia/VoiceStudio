@@ -16,8 +16,14 @@
         { "label": "$(rocket) Desktop-App starten", "description": "Electron, Dev-Modus",   "task": "VoiceStudio · Dev: Desktop-App starten" },
         { "label": "$(globe) Web + API starten",    "description": "Backend + Oberflaeche", "task": "VoiceStudio · Dev: Web + API starten" },
         { "label": "$(server) Nur API starten",     "description": "Backend",               "task": "VoiceStudio · Dev: Nur API starten" },
+        { "label": "$(package) Desktop-App bauen",  "description": "bun run build",         "task": "VoiceStudio · Build: Desktop-App bauen" },
+        { "label": "$(play) Desktop-App (Produktion)", "description": "baut vorher neu",    "task": "VoiceStudio · Build: Desktop-App bauen und starten" },
+        { "label": "$(beaker) Tests",               "description": "Electron-Tests",        "task": "VoiceStudio · Test: Tests" },
         { "label": "$(beaker) Frontend-Tests",      "description": "node --test",           "task": "VoiceStudio · Test: Frontend-Tests" },
+        { "label": "$(symbol-type) Typen pruefen",  "description": "typecheck",             "task": "VoiceStudio · Test: Typen pruefen" },
+        { "label": "$(checklist) Lint",             "description": "lint",                  "task": "VoiceStudio · Test: Lint" },
         { "label": "$(cloud-download) bun install", "description": "Pakete holen",          "task": "VoiceStudio · Setup: Pakete installieren" },
+        { "label": "$(server-environment) API einrichten", "description": "Python-Backend ueber uv", "task": "VoiceStudio · Setup: API einrichten" },
         { "label": "$(tools) Bun installieren",     "description": "einmalig, fehlt sonst", "task": "VoiceStudio · Setup: Bun installieren" }
       ]
     }

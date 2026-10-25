@@ -2,7 +2,7 @@
   // ============================================================
   // VoiceStudio – Tasks
   // Schema: "VoiceStudio · <Kategorie>: <Aktion>"
-  // Kategorien: Dev | Test | Setup
+  // Kategorien: Dev | Build | Test | Setup
   // Anzeige: Status-Bar-Menue via VsCodeTaskButtons (settings.json)
   //
   // Braucht Bun (packageManager bun@1.4.2) und uv. Fehlt Bun:
@@ -48,6 +48,61 @@
       "presentation": { "reveal": "always", "panel": "dedicated", "clear": true }
     },
     {
+      "label": "VoiceStudio · Build: Desktop-App bauen",
+      "detail": "bun run build – Electron-App im Produktionsmodus bauen",
+      "icon": { "id": "package", "color": "terminal.ansiYellow" },
+      "type": "shell",
+      "command": "bun run build",
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "shared", "clear": true }
+    },
+    {
+      "label": "VoiceStudio · Build: Desktop-App bauen und starten",
+      "detail": "bun run desktop-prod – baut neu und startet die gebaute App",
+      "icon": { "id": "play", "color": "terminal.ansiYellow" },
+      "type": "shell",
+      "command": "bun run desktop-prod",
+      "options": { "cwd": "${workspaceFolder}" },
+      "isBackground": true,
+      "runOptions": { "instanceLimit": 1 },
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated", "clear": true }
+    },
+    {
+      "label": "VoiceStudio · Test: Tests",
+      "detail": "bun run test – Tests der Electron-App",
+      "icon": { "id": "beaker", "color": "terminal.ansiMagenta" },
+      "type": "shell",
+      "command": "bun run test",
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": [],
+      "group": { "kind": "test", "isDefault": true },
+      "presentation": { "reveal": "always", "panel": "shared", "clear": true }
+    },
+    {
+      "label": "VoiceStudio · Test: Typen pruefen",
+      "detail": "bun run typecheck",
+      "icon": { "id": "symbol-type", "color": "terminal.ansiMagenta" },
+      "type": "shell",
+      "command": "bun run typecheck",
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": ["$tsc"],
+      "group": "test",
+      "presentation": { "reveal": "always", "panel": "shared", "clear": true }
+    },
+    {
+      "label": "VoiceStudio · Test: Lint",
+      "detail": "bun run lint",
+      "icon": { "id": "checklist", "color": "terminal.ansiMagenta" },
+      "type": "shell",
+      "command": "bun run lint",
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": [],
+      "group": "test",
+      "presentation": { "reveal": "always", "panel": "shared", "clear": true }
+    },
+    {
       "label": "VoiceStudio · Test: Frontend-Tests",
       "detail": "bun run test:frontend",
       "icon": { "id": "beaker", "color": "terminal.ansiMagenta" },
@@ -63,6 +118,16 @@
       "icon": { "id": "cloud-download", "color": "terminal.ansiYellow" },
       "type": "shell",
       "command": "bun install",
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "shared", "clear": true }
+    },
+    {
+      "label": "VoiceStudio · Setup: API einrichten",
+      "detail": "bun run setup:api – uv sync mit passendem PyTorch (GPU oder CPU), dann scripts/setup.py. Laedt mehrere GB",
+      "icon": { "id": "server-environment", "color": "terminal.ansiYellow" },
+      "type": "shell",
+      "command": "bun run setup:api",
       "options": { "cwd": "${workspaceFolder}" },
       "problemMatcher": [],
       "presentation": { "reveal": "always", "panel": "shared", "clear": true }
